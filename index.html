@@ -9,6 +9,30 @@
 </head>
 
 <body>
+    <h3>Количество побед</h3>
+    <div class="h3-row row justify-content-center">
+        <div id="player-1" class="col-5">Первый игрок: <span id="first-player-result">0</span></div>
+        <div id="player-2" class="col-5">Второй игрок: <span id="second-player-result">0</span></div>
+    </div>
+
+    <h3>Ход</h3>
+    <p>Ходит <span id="first-or-second">1</span> игрок - <span id="x-or-y">O</span></p>
+
+    <div class="canv">
+        <canvas id="c1" width="300" height="300"></canvas>
+    </div>
+
+    <p id="win"></p>
+
+
+
+
+    <div class="but2">
+        <button onclick="newRound()" type="button" id="green" class="btn btn-success">Новый раунд</button>
+        <button onclick="clearCanvas()" type="button" id="red" class="btn btn-danger">Сброс</button>
+    </div>
+
+
 
 
 
