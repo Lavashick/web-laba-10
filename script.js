@@ -78,3 +78,38 @@ let matr = [
     [2, 2, 2],
     [2, 2, 2]
 ]
+
+
+
+
+// Отрисовка крестика или нолика на canvas
+function drawXorO(point, chetClick) {
+    if (chetClick == 0) {
+        drawO(point[0] * 100, point[1] * 100)
+        firstOrSecondPlayer.innerHTML = "2"
+        XorO.innerHTML = "X"
+    } else {
+        drawX(point[0] * 100, point[1] * 100)
+        firstOrSecondPlayer.innerHTML = "1"
+        XorO.innerHTML = "O"
+    }
+}
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, 300, 300)
+    createCanvasLines()
+    matr = [
+        [2, 2, 2],
+        [2, 2, 2],
+        [2, 2, 2]
+    ]
+    countClick = 0
+}
+
+function newRound() {
+    clearCanvas()
+    firstPlayerCountNum = 0
+    secondPlayerCountNum = 0
+    secondPlayerCount.innerHTML = "0"
+    firstPlayerCount.innerHTML = "0"
+}
