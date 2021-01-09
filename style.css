@@ -1,0 +1,73 @@
+body {
+    margin-top: 40px;
+}
+
+#c1 {
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(153, 172, 123);
+}
+
+h3 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: grey;
+}
+
+.h3-row {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.canv {
+    width: 300px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#player-1 {
+    color: rgb(145, 30, 122);
+}
+
+#player-2 {
+    text-align: right;
+    color: rgb(10, 126, 120);
+}
+
+.buttons {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.but {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#win {
+    margin-top: 530px;
+    text-align: center;
+    color: red !important;
+}
+
+.but2 {
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    float: left;
+}
+
+#red {
+    margin-left: 30px;
+}

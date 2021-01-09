@@ -235,3 +235,22 @@ function newRound() {
     secondPlayerCount.innerHTML = "0"
     firstPlayerCount.innerHTML = "0"
 }
+
+function printWinner(num) {
+    let winStr = "ПОБЕДИЛ "
+    if (num == 0) {
+        winStr += "НОЛИК!!!"
+    }
+    if (num == 1) {
+        winStr += "КРЕСТИК!!!"
+    }
+    if (num == 2) {
+        winStr += "КРЕСТИК И НОЛИК!!!"
+    }
+    win.innerHTML = String(winStr)
+    setTimeout(clearWinnerText, 2000);
+}
+
+function clearWinnerText() {
+    win.innerHTML = ""
+}
