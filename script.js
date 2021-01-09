@@ -79,7 +79,23 @@ let matr = [
     [2, 2, 2]
 ]
 
+// Кол-во объектов на canvas
+let countClick = 0
 
+// Вычисление координат относительно canvas
+canvas.onclick = function getCoordinate(canvas) {
+    k = document.getElementById("c1").getBoundingClientRect()
+    var x = canvas.clientX - k.left
+    var y = canvas.clientY - k.top
+        //console.log("Координаты x: " + x + " y: " + y);
+    let point = calculatePosition(x, y)
+    changeMatrPoint(point)
+}
+
+// Показывает, к какой ячейке относится координата
+function calculatePosition(x, y) {
+    return [Math.floor(x / 100), Math.floor(y / 100)]
+}
 
 
 // Отрисовка крестика или нолика на canvas
