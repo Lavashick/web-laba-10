@@ -9,6 +9,7 @@ let firstPlayerCountNum = 0
 let secondPlayerCountNum = 0
 let win = document.getElementById("win")
 
+
 function createCanvasLines() {
     ctx.strokeStyle = "#353a2d"
     ctx.lineWidth = "2"
@@ -94,7 +95,6 @@ canvas.onclick = function getCoordinate(canvas) {
     k = document.getElementById("c1").getBoundingClientRect()
     var x = canvas.clientX - k.left
     var y = canvas.clientY - k.top
-        //console.log("Координаты x: " + x + " y: " + y);
     let point = calculatePosition(x, y)
     changeMatrPoint(point)
 }
@@ -114,8 +114,6 @@ function changeMatrPoint(point) {
         resultFinal = checkFinal();
         if (resultFinal == 2) {
             console.log("НИЧЬЯ!")
-            firstPlayerCountNum += 1
-            secondPlayerCountNum += 1
             firstPlayerCount.innerHTML = String(firstPlayerCountNum)
             secondPlayerCount.innerHTML = String(secondPlayerCountNum)
             printWinner(resultFinal)
@@ -137,7 +135,6 @@ function changeMatrPoint(point) {
         }
     }
 }
-
 
 // Отрисовка крестика или нолика на canvas
 function drawXorO(point, chetClick) {
@@ -245,7 +242,7 @@ function printWinner(num) {
         winStr += "КРЕСТИК!!!"
     }
     if (num == 2) {
-        winStr += "КРЕСТИК И НОЛИК!!!"
+        winStr += "НИКТО!!!"
     }
     win.innerHTML = String(winStr)
     setTimeout(clearWinnerText, 2000);
